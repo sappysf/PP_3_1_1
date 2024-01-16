@@ -3,11 +3,8 @@ package com.spring_crud.PP_3_1_1.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Getter
-@Setter
-@EqualsAndHashCode
-@ToString
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -22,9 +19,6 @@ public class User {
     @Column(name = "department")
     private String department;
 
-    public User() {
-
-    }
     public User(String name, String surname, String department) {
         this.name = name;
         this.surname = surname;
